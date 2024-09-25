@@ -33,7 +33,7 @@ const UpdateBook = () => {
                 alert("Please fill all the fields");
                 return;
             } else {
-                const response = await axios.put("http://localhost:1000/api/v1/update-book", Data, {headers});
+                const response = await axios.put("https://bookhaven-swm2.onrender.com/api/v1/update-book", Data, {headers});
                 setData({
                     url: "",
                     title: "",
@@ -52,7 +52,7 @@ const UpdateBook = () => {
 
     useEffect(() => {
         const fetch = async () => {
-            const response = await axios.get(`http://localhost:1000/api/v1/get-book-by-id/${id}`,);
+            const response = await axios.get(`https://bookhaven-swm2.onrender.com/api/v1/get-book-by-id/${id}`,);
 
             setData(response.data.data);
         }

@@ -9,7 +9,7 @@ const UserOrderHistory = () => {
 
     useEffect(() => {
         const fetch = async () => {
-            const response = await axios.get("http://localhost:1000/api/v1/get-order-history", { headers });
+            const response = await axios.get("https://bookhaven-swm2.onrender.com/api/v1/get-order-history", { headers });
             console.log(response.data.data);
             setOrderHistory(response.data.data);
         }

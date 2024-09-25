@@ -6,7 +6,7 @@ const AllBooks = () => {
     const [Data, setData] = useState();
     useEffect(() => {
         const fetch = async () => {
-            const response = await axios.get("http://localhost:1000/api/v1/get-books");
+            const response = await axios.get("https://bookhaven-swm2.onrender.com/api/v1/get-books");
             console.log(response.data.data);
             setData(response.data.data);
         }

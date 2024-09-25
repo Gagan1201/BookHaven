@@ -15,7 +15,7 @@ const AllOrders = () => {
 
     useEffect(() => {
         const fetch = async () => {
-            const response = await axios.get("http://localhost:1000/api/v1/get-all-order-history", {headers});
+            const response = await axios.get("https://bookhaven-swm2.onrender.com/api/v1/get-all-order-history", {headers});
             console.log(response.data.data);
             setAllOrderHistory(response.data.data);
         }

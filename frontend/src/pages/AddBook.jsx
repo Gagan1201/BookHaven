@@ -27,7 +27,7 @@ const AddBook = () => {
                 alert("Please fill all the fields");
                 return;
             } else {
-                const response = await axios.post("http://localhost:1000/api/v1/add-book", Data, {headers});
+                const response = await axios.post("https://bookhaven-swm2.onrender.com/api/v1/add-book", Data, {headers});
                 setData({
                     url: "",
                     title: "",

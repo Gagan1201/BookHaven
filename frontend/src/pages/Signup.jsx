@@ -16,7 +16,7 @@ const Signup = () => {
                 alert("Please fill all the fields");
                 return;
             } else {
-                const response = await axios.post("http://localhost:1000/api/v1/sign-up", Values);
+                const response = await axios.post("https://bookhaven-swm2.onrender.com/api/v1/sign-up", Values);
                 console.log(response.data);
                 alert(response.data.message);
                 navigate("/login");

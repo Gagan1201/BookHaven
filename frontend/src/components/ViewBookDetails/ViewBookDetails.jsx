@@ -17,7 +17,7 @@ const ViewBookDetails = () => {
     const [Data, setData] = useState();
     useEffect(() => {
         const fetch = async () => {
-            const response = await axios.get(`http://localhost:1000/api/v1/get-book-by-id/${id}`,);
+            const response = await axios.get(`https://bookhaven-swm2.onrender.com/api/v1/get-book-by-id/${id}`,);
 
             setData(response.data.data);
         }
@@ -31,13 +31,13 @@ const ViewBookDetails = () => {
     }
 
     const handleCart = async () => {
-        const response = await axios.put("http://localhost:1000/api/v1/add-to-cart/", {}, { headers });
+        const response = await axios.put("https://bookhaven-swm2.onrender.com/api/v1/add-to-cart/", {}, { headers });
         console.log(response.data);
         alert(response.data.message);
     }
 
     const deleteBook = async () => {
-        const response = await axios.delete("http://localhost:1000/api/v1/delete-book/", { headers });
+        const response = await axios.delete("https://bookhaven-swm2.onrender.com/api/v1/delete-book/", { headers });
         alert(response.data.message);
         navigate("/all-books");
     }
